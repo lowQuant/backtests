@@ -1,0 +1,50 @@
+Connecting to ArcticDB to fetch symbol list...
+Found 5086 symbols.
+Loading historical data from /Users/jo/Desktop/backtests/mean_reversion/us_stock_history_10y.csv...
+Data loaded successfully.
+Calculating indicators...
+Downloading Benchmark data...
+Loading local benchmark from /Users/jo/Desktop/backtests/data/SPY_20251103_20251230.parquet...
+Error loading local parquet: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+Attempting to download ^GSPC...
+Attempting to download SPY...
+Attempting to download ^SPY...
+Failed to download any benchmark data via yfinance.
+Constructing Synthetic Equal-Weight Universe Index as fallback...
+
+================================================================================
+STARTING PARAMETER SWEEP: Position Sizes [0.01, 0.03, 0.05, 0.08, 0.1]
+================================================================================
+
+>>> Simulating Strategy: Panic Dip + ATR Target (Size: 1.0%)
+DEBUG: Active Days: 1817
+DEBUG: SPY Days: 2515
+DEBUG: Common Days: 1817
+DEBUG: Strategy Date Example: 2015-12-03 00:00:00 (Type: <class 'pandas._libs.tslibs.timestamps.Timestamp'>)
+DEBUG: SPY Date Example: 2015-11-23 00:00:00 (Type: <class 'pandas._libs.tslibs.timestamps.Timestamp'>)
+
+>>> Simulating Strategy: Panic Dip + ATR Target (Size: 3.0%)
+
+>>> Simulating Strategy: Panic Dip + ATR Target (Size: 5.0%)
+
+>>> Simulating Strategy: Panic Dip + ATR Target (Size: 8.0%)
+
+>>> Simulating Strategy: Panic Dip + ATR Target (Size: 10.0%)
+
+====================================================================================================
+PARAMETER SWEEP RESULTS
+====================================================================================================
+ Size % CAGR % Total Ret % Sharpe Max DD %  SQN Exposure % Corr SPY  Trades Final Eq
+    1.0   2.36       26.33   0.68    -4.70 7.40      72.25     0.03    2274 $126,328
+    3.0   5.53       71.32   0.64   -13.24 5.70      72.09     0.04    2090 $171,324
+    5.0   7.34      103.13   0.62   -17.89 4.80      71.69     0.05    1930 $203,135
+    8.0   9.05      137.78   0.61   -24.19 4.22      71.13     0.05    1726 $237,775
+   10.0   9.86      156.16   0.61   -27.43 3.67      71.09     0.05    1635 $256,162
+====================================================================================================
+
+Plotting results for best run: 10.0% Size
+Comparison plot saved to /Users/jo/Desktop/backtests/mean_reversion/b_panic_dip_summary.png

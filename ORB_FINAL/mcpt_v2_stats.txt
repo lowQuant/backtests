@@ -1,0 +1,12 @@
+ORB Strategy (Base) Stats:
+  Real PF: 1.2051
+  Perm Mean: 0.8873
+  Perm Std: 0.0709
+  P-Value: 0.00001
+
+ORB Strategy (Enhanced) Stats:
+  Real PF: 1.4372
+  Perm Mean: 1.2178
+  Perm Std: 0.1027
+  P-Value: 0.01968
+

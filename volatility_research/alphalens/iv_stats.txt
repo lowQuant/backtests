@@ -1,0 +1,12 @@
+MEAN PERIOD RETURN BY IV QUANTILE (bps)
+                   1D      5D
+factor_quantile              
+1                7.68   62.07
+2                8.64   86.37
+3               -1.22   85.05
+4               -1.14   94.01
+5               -0.17  129.55
+
+SPREAD (Q5 - Q1) (bps)
+1D    -7.85
+5D    67.48
